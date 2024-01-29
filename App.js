@@ -31,7 +31,7 @@ export default function App() {
         <StatusBar style="auto" />
         {/* Sign in Component */} 
         <SignedIn>
-          <Text>You are Signed in</Text>
+          {/* <Text>You are Signed in</Text> */}
           <NavigationContainer>
             <TabNavigator />
           </NavigationContainer>
@@ -41,7 +41,7 @@ export default function App() {
         <SignedOut>        
           <Login />
         </SignedOut>
-        
+
       </View>
     </ClerkProvider>
   );

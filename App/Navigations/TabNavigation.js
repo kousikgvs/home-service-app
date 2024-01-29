@@ -6,13 +6,15 @@ import { Entypo } from '@expo/vector-icons';
 import { FontAwesome6 } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { Text } from 'react-native';
+import Colors from '../utils/Colors';
 const Tab = createBottomTabNavigator();
 
 export default function TabNavigator() {
     return (
         <Tab.Navigator screenOptions={
             {
-                headerShown: false
+                headerShown: false,
+                tabBarActiveTintColor:Colors.PRIMARY,
             }
         }>
             <Tab.Screen name="Home" component={HomeScreen}
@@ -27,14 +29,15 @@ export default function TabNavigator() {
                 options={{
                     tabBarLabel: ({ color }) => (<Text style={{ color: color, fontSize: 12, marginTop: -7 }}>Booking</Text>),
                     tabBarIcon: ({ color, size }) => (
-                        <FontAwesome6 name="book" size={24} color="black" />)
+<AntDesign name="book" size={24}  color={color} />                        
+                        )
                 }}
             />
             <Tab.Screen name="Profile" component={ProfileScreen}
                 options={{
                     tabBarLabel: ({ color }) => (<Text style={{ color: color, fontSize: 12, marginTop: -7 }}>Profile</Text>),
                     tabBarIcon: ({ color, size }) => (
-                        <AntDesign name="profile" size={24} color="black" />)
+                        <AntDesign name="profile" size={size}  color={color} />)
                 }}
             />
         </Tab.Navigator>
