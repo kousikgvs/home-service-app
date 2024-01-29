@@ -5,14 +5,14 @@ import Colors from '../../utils/Colors';
 const Login = () => {
   return (
     <View style={{alignItems:"center"}}>
-        <Image source={{ uri: 'https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?w=740&t=st=1706498472~exp=1706499072~hmac=5388be9d4b1084292a1e8b2d9299809066d7d0c23eebc3950fa8aa7b750c642f' }} style={styles.loginImage} />
+        <Image source={{ uri: 'https://img.freepik.com/free-vector/cleaners-with-cleaning-products-housekeeping-service_18591-52068.jpg?w=740&t=st=1706511126~exp=1706511726~hmac=5b6aad39393974c1de425c3dbec4c31bfabdfd5ccd505067f1a05d5cbe2413ba' }} style={styles.loginImage} />
         <View style={styles.subContainer}>
             <Text style={{fontSize:25 , color:Colors.WHITE  , textAlign:"center"}}
             >Lets Find {""}
             <Text style={{fontWeight:"bold"}}>Professional cleaning and Repair Services</Text>
             </Text>
             <Text style={{fontSize:16 , color:Colors.WHITE , textAlign:"center" , marginTop:20}}>Best App to find services near you which deliver you a Professional service</Text>
-            <TouchableOpacity style={styles.button} onPress={() => console.log("pressed the Button")}>
+            <TouchableOpacity style={styles.button} onPress={() => console.log("pressed The Button")}>
                 <Text style={{textAlign:"center" , color:Colors.PRIMARY}}>Let's get Started</Text>
             </TouchableOpacity>
         </View> 
@@ -24,9 +24,10 @@ export default Login;
 
 const styles = StyleSheet.create({
     loginImage:{
-        width:"70%",
+        width:"90%",
         height:"40%",
-        marginTop:70,
+        marginTop:80,
+        marginBottom:10,
         borderWidth:4,
         borderColor:Colors.BLACK,
         borderRadius:15,
