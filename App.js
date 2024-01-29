@@ -3,6 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import Login from './App/Screens/LoginScreen/Login';
 import { ClerkProvider, SignedIn, SignedOut } from "@clerk/clerk-expo";
 import * as SecureStore from "expo-secure-store";
+import { NavigationContainer } from '@react-navigation/native';
+import TabNavigator from './App/Navigations/TabNavigation';
 
 export default function App() {
 
@@ -30,11 +32,16 @@ export default function App() {
         {/* Sign in Component */} 
         <SignedIn>
           <Text>You are Signed in</Text>
+          <NavigationContainer>
+            <TabNavigator />
+          </NavigationContainer>
         </SignedIn>
+
         {/* Sign out Component */}
         <SignedOut>        
           <Login />
         </SignedOut>
+        
       </View>
     </ClerkProvider>
   );
