@@ -5,10 +5,10 @@ import { ClerkProvider, SignedIn, SignedOut } from "@clerk/clerk-expo";
 
 export default function App() {
   return (
-    <ClerkProvider publishableKey={'pk_test_cmFwaWQtYnVubnktODcuY2xlcmsuYWNjb3VudHMuZGV2JA'}>
+    <ClerkProvider publishableKey={process.env.CLERK_PUBLISHABLE_KEY}>
       <View style={styles.container}>
         <StatusBar style="auto" />
-        {/* Sign in Component */}
+        {/* Sign in Component */} 
         <SignedIn>
           <Text>You are Signed in</Text>
         </SignedIn>
