@@ -1,0 +1,20 @@
+import { request, gql } from 'graphql-request'
+
+const MASTER_URL= "https://api-ap-south-1.hygraph.com/v2/cls0c576w29hp01tem3a7nla9/master"
+const getSlider = async () => {
+    const document = gql`
+    query GetSlider {
+        sliders {
+          id
+          name
+          image {
+            url
+          }
+        }
+      }      
+`
+const result = await request( MASTER_URL , document)
+return result
+}
+
+export default {getSlider}
