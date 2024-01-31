@@ -28,10 +28,13 @@ const Categories = () => {
       showsHorizontalScrollIndicator={false}
       renderItem={({item , index}) => (
         <View style={{marginRight:20 , display:"flex" , flexDirection:"row" , gap:20 , alignItems:"center"}}>
+            <View style={{display:"flex" , flexDirection:"column" , alignItems:"center"}}>
             <View style={{backgroundColor:Colors.PRIMARY , borderRadius:30 , padding:10}}>
                 <Image source={{uri:item?.icon?.url}} 
                 style={styles.CategoriesImage}
                 />
+            </View>
+            <Text>{item?.name}</Text>
             </View>
         </View>
       )}
