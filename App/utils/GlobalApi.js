@@ -34,4 +34,27 @@ const result = await request( MASTER_URL , document)
 return result
 }
 
-export default {getSlider, getCategeories}
+
+const getBusinessLists = async () => {
+  const document = gql`
+  query getBusinessLists {
+    businessLists {
+      name
+      email
+      contactPerson
+      address
+      category {
+        name
+      }
+      images {
+        url
+      }
+      about
+    }
+  } 
+`
+const result = await request( MASTER_URL , document)
+return result
+}
+
+export default {getSlider, getCategeories , getBusinessLists}

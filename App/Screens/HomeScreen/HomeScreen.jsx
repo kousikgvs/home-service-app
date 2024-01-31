@@ -4,7 +4,7 @@ import Header from './Header'
 import { useUser } from '@clerk/clerk-expo'
 import Slider from './Slider'
 import Categories from './Categories'
-
+import BusinessCard from './BusinessCard'
 const HomeScreen = () => {
   const {user , isLoading} = useUser();
   return (
@@ -13,6 +13,7 @@ const HomeScreen = () => {
       <View style={{padding:20 , display:"flex" , flexDirection:"column" , gap:25}}>
         <Slider />
         <Categories />
+        <BusinessCard />
       </View>
     </View>
   )
