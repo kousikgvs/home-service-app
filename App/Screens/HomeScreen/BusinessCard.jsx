@@ -26,16 +26,17 @@ const BusinessCard = () => {
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}
                 renderItem={({ item, index }) => (
-                    <View style={{ marginRight: 20, display: "flex", flexDirection: "row", gap: 20, alignItems: "center" }}>
-                        <View style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                            <View style={{ backgroundColor: Colors.PRIMARY, borderRadius: 30, padding: 10 }}>
+                    <View style={{ marginRight: 20, display: "flex", flexDirection: "row", gap: 25, alignItems: "center" }}>
+                        <View style={{ display: "flex", flexDirection: "column", backgroundColor: Colors.WHITE  , borderRadius:20 , padding:15 , gap:3}}>
+                            <View style={{ padding: 10 }}>
                                 <Image
                                     source={{ uri: item?.images?.url }}
                                     style={styles.CategoriesImage}
                                 />
                             </View>
-                            <Text>{item?.name}</Text>
-                            <Text>{item?.about}</Text>
+                            <Text>Name : {item?.name}</Text>
+                            <Text>Work : {item?.about}</Text>
+                            <Text style={{backgroundColor:Colors.PRIMARY , color:Colors.WHITE , padding:5 , fontWeight:"800" , alignSelf:"flex-start" , borderRadius:10}}>{item.category.name}</Text>
                         </View>
                     </View>
                 )}
@@ -53,7 +54,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     CategoriesImage: {
-        width: 60,
-        height: 60,
+        width: 200,
+        height: 140,
     }
 })
